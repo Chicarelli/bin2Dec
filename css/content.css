@@ -12,6 +12,7 @@ input {
     font-size: 1.3rem;
     color: salmon;
     background: lightgoldenrodyellow;
+    width: 100%;
 }
 
 input:disabled {
@@ -27,8 +28,8 @@ input:disabled {
     background: lightsalmon;
 }
 
-.main_converter {
-    padding: 3rem;
+#main_converter {
+    padding: 3rem 4rem 3rem 3rem;
     border-radius: 8px;
     width: 300px;
     min-height: 400px;
@@ -41,5 +42,28 @@ input:disabled {
 
 .input_group > *{
     margin: 10px 0;
+}
+
+.div_inverter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn_inverter {
+    padding: 0 10px;
+    border-radius: 8px;
+    height: 55px;
+    font-weight: 700;
+    background: salmon;
+    border: lightsalmon; 
+    color: lightgoldenrodyellow;
+    width: max-content;
+    transition: .3s ease-in;
+}
+
+#btn_inverter:hover {
+    cursor: pointer;
+    opacity: .9;
 }
 

@@ -11,13 +11,15 @@
 </head>
 <body>
     <div class="content">
-        <main class="main_converter">
+        <main id="main_converter">
             <div class="input_group">
                 <label for="binary">Numério Binário:</label>
                 <input id="binary" onkeyup="changedInput('binary')">
             </div>
 
-            <!-- <button>INVERTER</button> -->
+            <div class="div_inverter">
+                <button onclick="toggleInput()" id="btn_inverter">INVERTER</button>
+            </div>
 
             <div class="input_group">
                 <label for="decimal">Número Decimal:</label>
