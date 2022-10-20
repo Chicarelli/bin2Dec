@@ -27,7 +27,7 @@ input:disabled {
     background: lightsalmon;
 }
 
-.main_converter {
+#main_converter {
     padding: 3rem;
     border-radius: 8px;
     width: 300px;

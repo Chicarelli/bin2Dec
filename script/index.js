@@ -2,6 +2,7 @@ function changedInput(typeInput) {
   if (typeInput === "binary") {
     cleanBinaryValue();
     setDecimalValue(convertBinary(getBinaryValue()));
+    getDecimalInput().disabled = !getDecimalInput().disabled;
     return;
   }
 
@@ -30,3 +31,14 @@ const convertBinary = (binary) => {
     return acc + (obj == 0 ? 0 : Math.pow(2, index));
   }, 0);
 };
+
+function toggleInput() {
+  getDecimalInput().disabled = !getDecimalInput().disabled;
+  getBinaryInput().disabled = !getBinaryInput().disabled;
+
+  document.getElementById("main_converter").style.flexDirection =
+    document.getElementById("main_converter").style.flexDirection ==
+    "column-reverse"
+      ? "column"
+      : "column-reverse";
+}
