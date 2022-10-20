@@ -2,12 +2,12 @@ function changedInput(typeInput) {
   if (typeInput === "binary") {
     cleanBinaryValue();
     setDecimalValue(convertBinary(getBinaryValue()));
-    getDecimalInput().disabled = !getDecimalInput().disabled;
     return;
   }
 
   cleanDecimalValue();
-  console.log("decimal");
+  setBinaryValue(convertDecimal(getDecimalValue()));
+  return;
 }
 
 const getBinaryValue = () => getBinaryInput().value;
@@ -30,6 +30,18 @@ const convertBinary = (binary) => {
   return text.reduce((acc, obj, index) => {
     return acc + (obj == 0 ? 0 : Math.pow(2, index));
   }, 0);
+};
+
+const convertDecimal = (decimalInput) => {
+  let binary = "";
+  let decimal = Number(decimalInput);
+
+  while (Number(decimal) > 1) {
+    binary = "" + binary + (Number(decimal) % 2);
+    decimal = Math.floor(decimal / 2);
+  }
+
+  return (binary + "1").split("").reverse().join("");
 };
 
 function toggleInput() {
