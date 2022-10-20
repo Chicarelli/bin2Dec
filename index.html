@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/content.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <main class="main_converter">
+            <div class="input_group">
+                <label for="binary">Numério Binário:</label>
+                <input id="binary" onkeyup="changedInput('binary')">
+            </div>
+
+            <!-- <button>INVERTER</button> -->
+
+            <div class="input_group">
+                <label for="decimal">Número Decimal:</label>
+                <input id="decimal" disabled onkeyup="changedInput('decimal')">
+            </div>
+        </main>
+    </div>
+    <script src="./script/index.js"></script>
+</body>
+</html>

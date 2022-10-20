@@ -1,0 +1,45 @@
+label {
+    color: black;
+    font-weight: 700;
+}
+
+input {
+    height: 50px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid lightsalmon;
+    padding: 0 8px;
+    font-size: 1.3rem;
+    color: salmon;
+    background: lightgoldenrodyellow;
+}
+
+input:disabled {
+    background: lightgray;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightsalmon;
+}
+
+.main_converter {
+    padding: 3rem;
+    border-radius: 8px;
+    width: 300px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    background: lightgoldenrodyellow;
+    justify-content: space-around;
+
+}
+
+.input_group > *{
+    margin: 10px 0;
+}
+
